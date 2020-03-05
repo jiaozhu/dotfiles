@@ -1,0 +1,5 @@
+#!/bin/bin/env sh
+
+
+feh --bg-fill $HOME/.config/wall.png &
+compton &
