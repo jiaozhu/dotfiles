@@ -2,4 +2,4 @@
 
 
 feh --bg-fill $HOME/.config/wall.png &
-compton &
+picom -b
