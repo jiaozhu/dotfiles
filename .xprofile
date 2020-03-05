@@ -3,3 +3,4 @@
 
 feh --bg-fill $HOME/.config/wall.png &
 picom -b
+ibus-daemon --xim &
