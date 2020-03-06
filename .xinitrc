@@ -36,4 +36,7 @@ fi
 
 [ -f ~/.xprofile  ] && . ~/.xprofile
 
-exec i3
+# start i3 and keep it running
+if [ -f /usr/bin/i3 ]; then
+    exec i3
+fi
