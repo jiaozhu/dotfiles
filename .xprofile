@@ -1,7 +1,7 @@
 #!/bin/bin/env sh
 
 
-feh --bg-fill $HOME/.config/wall.png &
+setbg &
 picom -b
 ibus-daemon --xim &
 nm-applet &
