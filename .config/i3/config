@@ -64,15 +64,16 @@ exec --no-startup-id setxkbmap -option ctrl:swapcaps
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec $term
+bindsym $mod+Return                exec $term
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d                     exec dmenu_run
 # start ranger
-bindsym $mod+r exec $term -e $FILE
+bindsym $mod+r                     exec $term -e $FILE
 # screenshots
-bindsym Print exec --no-startup-id maim pic-full-"$(date '+%y%m%d-%H%M-%S').png"
+bindsym Print                      exec --no-startup-id maim pic-full-"$(date '+%y%m%d-%H%M-%S').png"
+bindsym Shift+Print                exec --no-startup-id maimpick
 # ncmpcpp
-bindsym $mod+Shift+m exec $term -e ncmpcpp
+bindsym $mod+Shift+m               exec $term -e ncmpcpp
 
 
 # kill focused window
