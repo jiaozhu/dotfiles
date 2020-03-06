@@ -4,5 +4,6 @@
 feh --bg-fill $HOME/.config/wall.png &
 picom -b
 ibus-daemon --xim &
+nm-applet &
 # MPD daemon start (if no other user instance exists)
 [ ! -s ~/.config/mpd/pid  ] && mpd &
