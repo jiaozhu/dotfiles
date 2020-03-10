@@ -31,8 +31,12 @@ export TERMINAL="st"
 export FILE="ranger"
 
 alias config='/usr/bin/git --git-dir=/home/kaixin/.cfg/ --work-tree=/home/kaixin'
-alias setproxy='export all_proxy=socks5://127.0.0.1:1080'
+alias setproxy='export all_proxy=socks5h://localhost:1080'
 alias setnoproxy='export all_proxy='
 
 # curl https://raw.githubusercontent.com/riobard/bash-powerline/master/bash-powerline.sh > ~/.bash-powerline.sh
 source ~/.bash-powerline.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
