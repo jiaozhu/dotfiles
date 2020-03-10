@@ -1,6 +1,5 @@
 #!/bin/bin/env sh
 
-
 setbg &
 picom -b
 ibus-daemon --xim &
