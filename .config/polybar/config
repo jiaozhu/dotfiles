@@ -35,7 +35,7 @@ module-margin-right = 2
 
 underline-size = 1.5
 
-font-0 = "OverpassMonoLight:style=SemiBold:size=7"
+font-0 = "OverpassMonoLight:style=SemiBold:size=8"
 font-1 = Hermit-Regular:pixelsize=9:antialias=true:autohint=true;1
 font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-3 = siji:pixelsize=10;1
