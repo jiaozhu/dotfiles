@@ -39,6 +39,7 @@ fi
 eval $(ssh-agent)
 
 # start i3 and keep it running
-if [ -f /usr/bin/i3 ]; then
-    exec i3
-fi
+# if [ -f /usr/bin/i3 ]; then
+    # exec i3
+# fi
+exec bspwm
