@@ -11,13 +11,14 @@ compositing-underline = over
 compositing-border = over
 
 [colors]
-background = ${xrdb:background:#aa000000}
-background-alt = ${xrdb:color0:#000}
-foreground = ${xrdb:foreground:#dfdfdf}
-foreground-alt = ${xrdb:colorBD:#444}
-primary = ${xrdb:color4:#ffb52a}
-secondary = ${xrdb:color3:#e60053}
-alert = ${xrdb:color1:#bd2c40}
+background = ${xrdb:background}
+background-wm = #444
+background-alt = #2d2d2d
+foreground = ${xrdb:foreground}
+foreground-alt = #555
+primary = #3c71ea
+secondary = ${xrdb:color3}
+alert = #ed0b0b
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
@@ -48,12 +49,10 @@ underline-size = 1.5
 font-0 = OverpassMonoLight:style=SemiBold:size=9;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;2
 font-2 = siji:pixelsize=9;3
-font-3 = Font Awesome 5 Free Solid:style=Solid:pixelsize=8:antialias=true:autohint=true:4
-font-4 = Font Awesome 5 Brands Regular:style=Regular:pixelsize=8:antialias=true:autohint=true:4
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = filesystem pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = filesystem pulseaudio xkeyboard memory cpu wlan eth battery temperature time
 
 ; tray-position = right
 ; tray-padding = 2
@@ -61,9 +60,21 @@ modules-right = filesystem pulseaudio xkeyboard memory cpu wlan eth battery temp
 ; tray-maxsize = 16
 ;tray-background = #0063ff
 
+tray-position = right
+tray-padding = 1
+tray-background = ${colors.background-alt}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-scale = 1.0
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
 ;wm-restack = bspwm
 ;wm-restack = i3
 ;override-redirect = true
+wm-restack = bspwm
+enable-ipc = true
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
@@ -72,7 +83,7 @@ modules-right = filesystem pulseaudio xkeyboard memory cpu wlan eth battery temp
 ;scroll-down = i3wm-wsprev
 
 cursor-click = pointer
-cursor-scroll = ns-resize
+cursor-scroll = default
 
 [module/xwindow]
 type = internal/xwindow
@@ -135,11 +146,6 @@ wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-default = 
 
 label-mode-padding = 2
 label-mode-foreground = #000
@@ -279,6 +285,26 @@ format-prefix-foreground = ${colors.foreground-alt}
 ;;format-underline = #0a6cf5
 
 label = %date% %time%
+
+[module/weather]
+type = custom/script
+exec = i3weather
+label = "%output%"
+click-left = $TERMINAL -e w3m wttr.in/Nanjing &
+interval = 1800
+format-underline = #268bd2
+format-background = ${colors.background-alt}
+format-padding = 1
+
+[module/time]
+type = custom/script
+exec = date '+%d/%m/%Y %H:%M:%S'
+click-left = $TERMINAL -e calcurse &
+label = "%output%"
+interval = 5
+format-underline = #268bd2
+format-background = ${colors.background-alt}
+format-padding = 1
 
 [module/pulseaudio]
 type = internal/pulseaudio
