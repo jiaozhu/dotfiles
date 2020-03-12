@@ -10,5 +10,8 @@ picom -b
 udiskie &
 ibus-daemon --xim &
 nm-applet &
+# banish the mouse cursor when typing, show it again when the mouse moves
+xbanish &
 # MPD daemon start (if no other user instance exists)
+xsetroot -cursor_name left_ptr &
 [ ! -s ~/.config/mpd/pid  ] && mpd &
