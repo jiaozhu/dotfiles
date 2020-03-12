@@ -17,6 +17,7 @@ super + d
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+        notify-send "sxhkd config reloaded"
 
 #
 # bspwm hotkeys
@@ -29,6 +30,17 @@ super + shift + {q,r}
 # close and kill
 super + shift + c
 	bspc node -c
+
+# shutdown
+control + super + q
+    zenity --question --text="Shutdown?" && shutdown -h now
+
+# reboot
+control + super + r
+    zenity --question --text="Reboot?" && shutdown -r now
+
+super + shift + l
+    betterlockscreen -l
 
 # alternate between the tiled and monocle layout
 super + m
