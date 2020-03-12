@@ -91,6 +91,11 @@ super + {_,shift + }{1-9,0}
 #
 # preselect
 #
+super + Print
+        maim pic-full-"$(date '+%y%m%d-%H%M-%S').png"
+
+super + shift + Print
+        maimpick
 
 # preselect the direction
 super + ctrl + {h,j,k,l}
