@@ -4,6 +4,7 @@
 # Add this when you include flatpak in your system
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
 
+dunst &
 setbg &
 picom -b
 udiskie &

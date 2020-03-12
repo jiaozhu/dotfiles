@@ -4,7 +4,10 @@
 
 HISTSIZE= HISTFILESIZE= # Infinite history.
 
-
+# Config directory
+[ ! -d $HOME/.config  ] && mkdir $HOME/.config
+# Local directory
+[ ! -d $HOME/.local  ] && mkdir $HOME/.local
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
