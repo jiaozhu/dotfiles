@@ -7,7 +7,7 @@ dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XA
 dunst &
 setbg &
 picom -b
-udiskie &
+udiskie -t &
 ibus-daemon --xim &
 nm-applet &
 # banish the mouse cursor when typing, show it again when the mouse moves
