@@ -1,0 +1,6 @@
+#!/bin/bash
+
+url="https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best.txt"
+gittrackers=`echo $(curl -s $url)`
+trackers=`echo ${gittrackers// /,}`
+echo $trackers
