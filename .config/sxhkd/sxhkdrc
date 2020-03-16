@@ -39,7 +39,7 @@ control + super + q
 control + super + r
     zenity --question --text="Reboot?" && shutdown -r now
 
-super + shift + l
+control + super + shift + l
     betterlockscreen -l
 
 # alternate between the tiled and monocle layout
