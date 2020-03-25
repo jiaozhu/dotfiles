@@ -4,6 +4,7 @@
 ! | |_| || |    http://www.gitlab.com/dwt1/ 
 ! |____/ |_|  	
 
+#include ".config/urxvt/config"
 
 Xft.dpi: 96
 Xft.antialias: true

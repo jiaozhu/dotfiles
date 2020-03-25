@@ -1,0 +1,40 @@
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.scrollBar_floating: false
+URxvt.scrollstyle: rxvt
+
+!!URxvt*font: xft:Fira Mono for Powerline:pixelsize=14:antialias=true:hinting=true
+*.font: Source Code Pro for Powerline-14
+URxvt.font: xft:Source Code Pro for Powerline:pixelsize=14
+
+URxvt.perl-lib: /home/kaixin/.config/urxvt/
+URxvt.perl-ext-common: default,resize-font,selection-to-clipboard,url-select,pasta,matcher,keyboard-select
+URxvt.url-select.launcher: firefox
+URxvt.underlineURLs: true
+URxvt.matcher.button: 1
+URxvt.keysym.M-Escape:perl:keyboard-select:active
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.keysym.M-c: perl:pasta:copy
+URxvt.keysym.M-v: perl:pasta:paste
+URxvt.keysym.M-plus: resize-font:bigger
+URxvt.keysym.M-minus: resize-font:smaller
+URxvt.keysym.M-equal: resize-font:reset
+
+URxvt.clipboard.autocopy: true
+URxvt.url-select.autocopy: true
+
+URxvt*termName:                 rxvt-256color
+URxvt.depth:                    32
+URxvt*lineSpace:                1
+URxvt.letterSpace:              -1
+URxvt.iso14755:                 false
+URxvt.iso14755_52:              false
+URxvt*geometry:                 65x17
+URxvt*loginShell:               true
+URxvt.internalBorder:           5
+URxvt.background: [80]#000000
+URxvt.foreground: #f2eae3
+URxvt.inputMethod: fcitx
+URxvt.preeditType: OverTheSpot
+
+; vim:ft=xdefaults
