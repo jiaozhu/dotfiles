@@ -42,4 +42,8 @@ eval $(ssh-agent)
 # if [ -f /usr/bin/i3 ]; then
     # exec i3
 # fi
+
+xset +fp /home/kaixin/.local/share/fonts
+xset fp rehash
+
 exec bspwm

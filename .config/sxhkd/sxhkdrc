@@ -4,11 +4,11 @@
 
 # terminal emulator
 super + Return
-	st
+	urxvt
 
 # terminal file manager
 super + r
-	st -e ranger
+	urxvt -e ranger
 
 # program launcher
 super + d
